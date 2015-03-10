@@ -1,0 +1,107 @@
+html {
+    heigh: 100%;
+}
+
+.btn {
+    position: absolute;
+    z-index: 500;
+    display: none;
+}
+
+.machine-container {
+    width: 320px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    border: 1px solid black;
+    overflow: hidden;
+    -webkit-perspective: 500;
+       -moz-perspective: 500;
+        -ms-perspective: 500;
+         -o-perspective: 500;
+            perspective: 500;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
+       -moz-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
+        -ms-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
+        -o-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
+            box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
+}
+
+.table-stand {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #c66e3d;
+    height: 30px;
+    transform: rotateX(0deg);
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.table-top {
+    position: absolute;
+    bottom: 5px;
+    left: -2%;
+    width: 104%;
+    background-color: #c66e3d;
+    height: 100px;
+    transform: rotateX(95deg);
+    z-index: 5;
+    -webkit-transform: rotateX(45deg);
+       -moz-transform: rotateX(45deg);
+        -ms-transform: rotateX(45deg);
+         -o-transform: rotateX(45deg);
+            transform: rotateX(45deg);
+}
+
+.lattery {
+    position: absolute;
+    background-color: #636363;
+}
+
+.lattery.base-sides {
+    width: 65%;
+    height: 20px;
+    bottom: 8px;
+    border-radius: 4px;
+    z-index: 9;
+    left: 17.5%;
+}
+
+.lattery.base {
+    left: 20%;
+    width: 60%;
+    height: 100px;
+    bottom: 25px;
+    border-radius: 4px;
+    z-index: 10;
+    -webkit-transform: rotateX(55deg);
+       -moz-transform: rotateX(55deg);
+        -ms-transform: rotateX(55deg);
+         -o-transform: rotateX(55deg);
+            transform: rotateX(55deg);
+}
+
+.lattery.spine {
+    width: 20%;
+    height: 400px;
+    left: 40%;
+    bottom: 90px;
+    z-index: 14;
+}
+
+.lattery.spine.top {
+    bottom: 453px;
+    z-index: 15;
+    height: 80px;
+    width: 19%;
+    left: 40.5%;
+    -webkit-transform: rotateX(60deg);
+       -moz-transform: rotateX(60deg);
+        -ms-transform: rotateX(60deg);
+         -o-transform: rotateX(60deg);
+            transform: rotateX(63deg);
+}
