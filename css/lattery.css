@@ -2,15 +2,9 @@ html {
     heigh: 100%;
 }
 
-.btn {
-    position: absolute;
-    z-index: 500;
-    display: none;
-}
-
 .lattery-container {
     width: 320px;
-    height: 600px;
+    height: 500px;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -19,7 +13,6 @@ html {
     -webkit-perspective: 500;
        -moz-perspective: 500;
         -ms-perspective: 500;
-         -o-perspective: 500;
             perspective: 500;
 }
 
@@ -27,7 +20,6 @@ html {
     -webkit-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
        -moz-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
         -ms-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
-        -o-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
             box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(255,255,255,.5);
 }
 
@@ -35,30 +27,39 @@ html {
     box-shadow: inset 0 12px 25px 4px rgba(0,0,0,.1);
 }
 
-.table-stand {
+.top-segment-shadow {
+    -webkit-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(0,0,0,.15);
+       -moz-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(0,0,0,.15);
+        -ms-box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(0,0,0,.15);
+            box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 25px 25px -25px rgba(0,0,0,.15);
+}
+
+.segment-shadow {
+    box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 12px 25px 4px rgba(0,0,0,.1);
+}
+
+.table-front {
     position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #c66e3d;
     height: 30px;
-    transform: rotateX(0deg);
     box-shadow: 0 10px 6px -6px #777;
 }
 
 .table-top {
     position: absolute;
-    bottom: 5px;
+    bottom: 15px;
     left: -2%;
     width: 104%;
     background-color: #c66e3d;
     height: 100px;
     transform: rotateX(95deg);
     z-index: 5;
-    -webkit-transform: rotateX(45deg);
-       -moz-transform: rotateX(45deg);
-        -ms-transform: rotateX(45deg);
-         -o-transform: rotateX(45deg);
-            transform: rotateX(45deg);
+    -webkit-transform: rotateX(60deg);
+       -moz-transform: rotateX(60deg);
+        -ms-transform: rotateX(60deg);
+            transform: rotateX(60deg);
 }
 
 .lattery {
@@ -69,7 +70,7 @@ html {
 .lattery.base-sides {
     width: 65%;
     height: 20px;
-    bottom: 8px;
+    bottom: 30px;
     border-radius: 4px;
     z-index: 9;
     left: 17.5%;
@@ -79,26 +80,25 @@ html {
     left: 20%;
     width: 60%;
     height: 100px;
-    bottom: 25px;
+    bottom: 40px;
     border-radius: 4px;
     z-index: 10;
-    -webkit-transform: rotateX(55deg);
-       -moz-transform: rotateX(55deg);
-        -ms-transform: rotateX(55deg);
-         -o-transform: rotateX(55deg);
-            transform: rotateX(55deg);
+    -webkit-transform: rotateX(60deg);
+       -moz-transform: rotateX(60deg);
+        -ms-transform: rotateX(60deg);
+            transform: rotateX(60deg);
 }
 
 .lattery.spine {
     width: 20%;
-    height: 400px;
+    height: 300px;
     left: 40%;
-    bottom: 90px;
+    bottom: 105px;
     z-index: 14;
 }
 
 .lattery.spine.top {
-    bottom: 453px;
+    bottom: 372px;
     z-index: 15;
     height: 80px;
     width: 19%;
@@ -106,26 +106,237 @@ html {
     -webkit-transform: rotateX(60deg);
        -moz-transform: rotateX(60deg);
         -ms-transform: rotateX(60deg);
-         -o-transform: rotateX(60deg);
-            transform: rotateX(63deg);
+            transform: rotateX(60deg);
+}
+
+.lattery.spine.column-shadow {
+    box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 12px 25px 4px rgba(0,0,0,.1);
 }
 
 .lattery.segment {
     width: 45%;
-    height: 55px;
     left: 27.5%;
+}
+
+.lattery.segment.top {
     z-index: 20;
+    border-radius: 50%;
+    height: 55px;
+    -webkit-transform: rotateX(60deg);
+       -moz-transform: rotateX(60deg);
+        -ms-transform: rotateX(60deg);
+            transform: rotateX(60deg);
 }
 
-.lattery.segment.ingredient {
-    bottom: 370px;
+.lattery.segment.top.cup {
+    bottom: 280px;
+    z-index: 24;
 }
 
-.lattery.segment.filter {
-    bottom: 270px;
+.lattery.segment.top.filter {
+    bottom: 230px;
+    z-index: 22;
 }
 
-.lattery.segment.cup {
+.lattery.segment.top.ingredient {
+    bottom: 180px;
+}
+
+.lattery.segment.bottom {
+    border-bottom-right-radius: 45%;
+    border-bottom-left-radius: 45%;
+    height: 55px;
+    box-shadow: 0 10px 30px -6px rgba(0,0,0,.2), inset 0 12px 25px 4px rgba(0,0,0,.1);
+}
+
+.lattery.segment.bottom.cup {
+    bottom: 250px;
+    z-index: 23;
+}
+
+.lattery.segment.bottom.filter {
+    bottom: 200px;
+    z-index: 21;
+}
+
+.lattery.segment.bottom.ingredient {
     bottom: 150px;
-    height: 75px
+    z-index: 19;
+}
+
+.lattery.segment.window {
+    height: 40px;
+    width: 40%;
+    left: 30%;
+    background-color: white;
+    border-bottom-right-radius: 45%;
+    border-bottom-left-radius: 45%;
+    overflow: hidden;
+    box-shadow: 0 3px 6px 0px rgba(255,255,255,.5);
+}
+
+.lattery.segment.window.cup {
+    bottom: 260px;
+    z-index: 23;
+}
+
+.lattery.segment.window.filter {
+    bottom: 210px;
+    z-index: 21;
+}
+
+.lattery.segment.window.ingredient {
+    bottom: 160px;
+    z-index: 19;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotateY(-1080deg);    }
+    100%   { -webkit-transform: rotateY(0deg); }
+}
+
+@keyframes spin {
+    0% {
+      -moz-transform: rotateY(-360deg);
+       -ms-transform: rotateY(-360deg);
+           transform: rotateY(-360deg);
+    }
+    100% {
+      -moz-transform: rotateY(0deg);
+       -ms-transform: rotateY(0deg);
+           transform: rotateY(0deg);
+    }
+}
+
+/* Make .spin.1 .spin.2 .spin.3 animations */
+
+.spin {
+    -webkit-animation-name: spin;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: forwards;
+    
+    -moz-animation-name: spin;
+    -moz-animation-timing-function: linear;
+    -moz-animation-duration: 3s;
+    -moz-animation-fill-mode: forwards;
+    
+    -ms-animation-name: spin;
+    -ms-animation-timing-function: linear;
+    -ms-animation-duration: 3s;
+    -ms-animation-fill-mode: forwards;
+    
+    /* Timing functions thanks to http://matthewlein.com/ceaser/ */
+/*
+    -webkit-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
+       -moz-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
+         -o-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
+            animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1);
+*/
+    
+    animation-name: spin;
+/*    animation-timing-function: linear;*/
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.lattery.segment.window > div {
+    z-index: 30;
+    height: 40px;
+    width: 128px;
+    
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+    
+    -webkit-perspective-origin: 0 50%;
+    -moz-perspective-origin: 0 50%;
+    -ms-perspective-origin: 0 50%;
+    perspective-origin: 0 50%;
+    
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+}
+
+#filter {
+    -webkit-animation-delay: .4s;
+}
+
+#ingredients {
+    -webkit-animation-delay: .6s;
+}
+
+#cup div, #filter div, #ingredients div {
+    position: absolute;
+    width: 100%;
+    top: 12px;
+    
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#cup .coffee, #filter .coffee, #ingredients .coffee {
+    -webkit-transform: rotateY(0deg) translateZ(37px);
+    -moz-transform: rotateY(0deg) translateZ(37px);
+    -ms-transform: rotateY(0deg) translateZ(37px);
+    transform: rotateY(0deg) translateZ(37px);
+}
+
+#cup .tea, #filter .tea, #ingredients .tea {
+    -webkit-transform: rotateY(-120deg) translateZ(37px);
+    -moz-transform: rotateY(-120deg) translateZ(37px);
+    -ms-transform: rotateY(-120deg) translateZ(37px);
+    transform: rotateY(-120deg) translateZ(37px);
+}
+
+#cup .espresso, #filter .espresso, #ingredients .espresso {
+    -webkit-transform: rotateY(-240deg) translateZ(37px);
+    -moz-transform: rotateY(-240deg) translateZ(37px);
+    -ms-transform: rotateY(-240deg) translateZ(37px);
+    transform: rotateY(-240deg) translateZ(37px);
+}
+
+@-webkit-keyframes button-flash {
+    0% { background: #ff5414; }
+    50%   { background: #ff9e7a; }
+    100% { background: #ff5414; }
+}
+
+@keyframes button-flash {
+    0% { background: #ff5414; }
+    50% { background: #ff9e7a; }
+    100% { background: #ff5414; }
+}
+
+.go-button {
+    position: relative;
+    top: 120px;
+    z-index: 500;
+    border-radius: 4px;
+    background-color: #ff5414;
+    font-size: 18px;
+    padding: .4em;
+    border: none;
+    
+    -webkit-animation-name: button-flash;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+}
+
+.go-button.paused {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.go-button:focus {
+    outline: none;
 }
