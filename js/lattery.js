@@ -26,7 +26,7 @@ $(document).ready(function() {
 });
 
 function spinReel() {
-    return Math.floor(Math.random() * 3);
+    return Math.ceil(Math.random() * 3);
 }
 
 function youMadeCoffee() {
@@ -40,7 +40,6 @@ function sad() {
 function spin(num, el) {
     // Generate the number of times to spin
     var offset = 1 + (num/3);
-    console.log(offset);
     
     // Need to add animation for each browser
     var webkit = "-webkit-";
@@ -48,8 +47,8 @@ function spin(num, el) {
     var ms = "-ms-";
     var animation = "animation-iteration-count: " + offset + ";";
     
-    $(el).attr('style', webkit + animation + " " + moz + animation + " " + ms + animation + " " + animation);
-    $(el).addClass('spin');
+//    $(el).attr('style', webkit + animation + " " + moz + animation + " " + ms + animation + " " + animation);
+    $(el).addClass("spin spin" + num);
     
 }
 

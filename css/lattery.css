@@ -190,54 +190,94 @@ html {
     z-index: 19;
 }
 
-@-webkit-keyframes spin {
-    0% { -webkit-transform: rotateY(-1080deg);    }
-    100%   { -webkit-transform: rotateY(0deg); }
+@-webkit-keyframes spin1 {
+    0% { -webkit-transform: rotateY(0deg);    }
+    100%   { -webkit-transform: rotateY(-1080deg); }
 }
 
-@keyframes spin {
+@keyframes spin1 {
     0% {
-      -moz-transform: rotateY(-360deg);
-       -ms-transform: rotateY(-360deg);
-           transform: rotateY(-360deg);
-    }
-    100% {
       -moz-transform: rotateY(0deg);
        -ms-transform: rotateY(0deg);
            transform: rotateY(0deg);
     }
+    100% {
+      -moz-transform: rotateY(-1080deg);
+       -ms-transform: rotateY(-1080deg);
+           transform: rotateY(-1080deg);
+    }
 }
 
-/* Make .spin.1 .spin.2 .spin.3 animations */
+@-webkit-keyframes spin2 {
+    0% { -webkit-transform: rotateY(0deg);    }
+    100%   { -webkit-transform: rotateY(-1200deg); }
+}
+
+@keyframes spin2 {
+    0% {
+      -moz-transform: rotateY(0deg);
+       -ms-transform: rotateY(0deg);
+           transform: rotateY(0deg);
+    }
+    100% {
+      -moz-transform: rotateY(-1200deg);
+       -ms-transform: rotateY(-1200deg);
+           transform: rotateY(-1200deg);
+    }
+}
+
+@-webkit-keyframes spin3 {
+    0% { -webkit-transform: rotateY(0deg);    }
+    100%   { -webkit-transform: rotateY(-1200deg); }
+}
+
+@keyframes spin3 {
+    0% {
+      -moz-transform: rotateY(0deg);
+       -ms-transform: rotateY(0deg);
+           transform: rotateY(0deg);
+    }
+    100% {
+      -moz-transform: rotateY(-1320deg);
+       -ms-transform: rotateY(-1320deg);
+           transform: rotateY(-1320deg);
+    }
+}
 
 .spin {
-    -webkit-animation-name: spin;
-    -webkit-animation-timing-function: linear;
+    /* Timing function help thanks to http://matthewlein.com/ceaser/ */
+    
+    -webkit-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1);
+    -webkit-animation-iteration-count: 1;
     -webkit-animation-duration: 3s;
     -webkit-animation-fill-mode: forwards;
     
-    -moz-animation-name: spin;
-    -moz-animation-timing-function: linear;
+    -moz-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1);
+    -moz-animation-iteration-count: 1;
     -moz-animation-duration: 3s;
     -moz-animation-fill-mode: forwards;
     
-    -ms-animation-name: spin;
-    -ms-animation-timing-function: linear;
+    -ms-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
+    -ms-animation-iteration-count: 1;
     -ms-animation-duration: 3s;
     -ms-animation-fill-mode: forwards;
-    
-    /* Timing functions thanks to http://matthewlein.com/ceaser/ */
-/*
-    -webkit-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
-       -moz-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
-         -o-animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1); 
-            animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1);
-*/
-    
-    animation-name: spin;
-/*    animation-timing-function: linear;*/
+
+    animation-timing-function: cubic-bezier(0.725, -0.355, 0.135, 1);
+    animation-iteration-count: 1;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+}
+
+.spin.spin1 {
+    -webkit-animation-name: spin1;
+}
+
+.spin.spin2 {
+    -webkit-animation-name: spin2;
+}
+
+.spin.spin3 {
+    -webkit-animation-name: spin3;
 }
 
 .lattery.segment.window > div {
