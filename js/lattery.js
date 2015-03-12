@@ -1,13 +1,8 @@
-// Each offset is the same per panel, offsets are in degrees
-// Offsets are calculated by 360 / 3 = 120 degree viewport per panel
-var COFFEE_OFFSET = 0;
-var TEA_OFFSET = 120;
-var ESPRESSO_OFFSET = 240
-
 $(document).ready(function() {
 
     $('.go-button').click(function() {
         $(this).addClass('paused');
+        $(this).prop('disabled',true);
         
         var first = spinReel();
         var second = spinReel();
@@ -18,9 +13,20 @@ $(document).ready(function() {
         spin(third, '#ingredients');
         
         if (first === second && second === third)
-            youMadeCoffee();
+            winner(first);
         else
-            sad();
+            loser();
+    });
+    
+    $('.sadface').click(function() {
+        $(this).removeClass('wiggle');
+        reset();
+    });
+    
+    $('.drink').click(function() {
+        $(this).removeClass('drop');
+        $(this).removeClass('wobble');
+        reset();
     });
     
 });
@@ -29,44 +35,47 @@ function spinReel() {
     return Math.ceil(Math.random() * 3);
 }
 
-function youMadeCoffee() {
-    console.log('Yippee!!');
+function winner(num) {
+    setTimeout(function() {
+        var color = "";
+        switch(num) {
+            case 1:
+                // Coffee
+                color = '106,67,53,.8';
+                break;
+            case 2:
+                // Tea
+                color = '75,50,40,.8';
+                break;
+            case 3:
+                // Espresso
+                color = '70,103,40,.8';
+                break;
+            default:
+                // Bad
+                color = '0,0,0,1';
+                break;
+        }
+        $('.liquid').css('background-color', 'rgba(' + color + ')');
+        $('.drink').addClass('wobble drop');
+    }, 4000);
 }
 
-function sad() {
-    console.log(':(');
+function loser() {
+    setTimeout(function() { 
+        $('.sadface').addClass('wiggle');
+    }, 4000);
 }
 
 function spin(num, el) {
-    // Generate the number of times to spin
-    var offset = 1 + (num/3);
-    
-    // Need to add animation for each browser
-    var webkit = "-webkit-";
-    var moz = "-moz-";
-    var ms = "-ms-";
-    var animation = "animation-iteration-count: " + offset + ";";
-    
-//    $(el).attr('style', webkit + animation + " " + moz + animation + " " + ms + animation + " " + animation);
+    // Add the proper class based on the roll
     $(el).addClass("spin spin" + num);
-    
 }
 
 function reset() {
     $('.go-button').removeClass('paused');
+    $('.go-button').prop('disabled',false);
+    $('#ingredients').removeClass();
+    $('#cup').removeClass();
+    $('#filter').removeClass();
 }
-
-/*
-function lattery() {
-    entry function
-    rolls the dics
-    kicks off animation sequence based off dice roll
-    sets timeout for clear function popup
-}
-
-function spawnClearModal() {
-    After timeout, spawn a modal at the top of .coffee-container that allows the user to reset the machine
-    On 'reset' button click: reset();
-}
-
-*/
